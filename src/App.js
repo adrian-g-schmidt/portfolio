@@ -24,14 +24,8 @@ import Ping from './projects/Ping';
 
 
 
-// Uncomment this for google tracking
-// import ReactGA from "react-ga4";
-// ReactGA.initialize('G-MSPZLVKWK8');
-
-  // // Google tracking for each apge
-  // useEffect(() => {
-  //   ReactGA.send({ hitType: "pageview", page: location.pathname, title: location.pathname });
-  // }, [location]);
+import ReactGA from "react-ga4";
+ReactGA.initialize('G-MSPZLVKWK8');
 
 
 
@@ -47,7 +41,12 @@ function App() {
   const scrollRef = useRef(null);
   const [scrollAtTop, setScrollAtTop] = useState(false);
 
+  // Google tracking for each apge
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname, title: location.pathname });
+  }, [location]);
 
+  
   useEffect(() => {
     if ((location.pathname === "/" && displayLocation.pathname === "/projects") || (location.pathname === "/projects" && displayLocation.pathname === "/")){
       setDisplayLocation(location);
