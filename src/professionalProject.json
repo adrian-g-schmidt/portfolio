@@ -4,97 +4,111 @@
         "tags": ["AI", "Full Stack"],
         "imageSrc": "sonic.png",
         "link": "/sonic",
-        "description": ["Developing software for musicians to use generative AI in live performances at the Sydney Opera House."]
+        "description": ["Developing software for musicians to use generative AI in live performances at the Sydney Opera House."],
+        "alt": "2 Musicians standing on a colorful stage"
     },
     {
         "title": "PANIC",
         "tags": ["AI", "Design", "Making"],
         "imageSrc": "panic-cover.jpg",
         "link": "/panic",
-        "description": ["An art installation where audiences and generative AI systems shape each other, creating feedback loops between different models."]
+        "description": ["An art installation where audiences and generative AI systems shape each other, creating feedback loops between different models."],
+        "alt": "A series of screens showing different generated images"
     },
     {
         "title": "Mixed Reality Navigation",
         "tags": ["Unity", "XR", "Web Dev"],
         "imageSrc": "mr-main.jpg",
         "link": "/mrnavigation",
-        "description": ["Prototypes exploring audio and mixed reality technologies for the future of navigation."]
+        "description": ["Prototypes exploring audio and mixed reality technologies for the future of navigation."],
+        "alt": "A hand in first person view hovering over a mixed reality button"
     },
     {
         "title": "Habit Helper",
         "tags": ["AI", "Full Stack"],
         "imageSrc": "habit.png",
         "link": "/habithelper",
-        "description": ["A prototype web app exploring how language models can assist in building positive habits."]
+        "description": ["A prototype web app exploring how language models can assist in building positive habits."],
+        "alt": "An open laptop displaying a habit-helper webpage"
     },
     {
         "title": "System of a Sound",
         "tags": ["Design", "Web Dev"],
         "imageSrc": "soas.jpg",
         "link": "/system",
-        "description": ["An exhibition giving voice to the hidden data of buildings."]
+        "description": ["An exhibition giving voice to the hidden data of buildings."],
+        "alt": "A woman standing infront of a screen with her arms gesturing outwards."
     },
     {
         "title": "Australian Cybernetic Interactive Poster",
         "tags": ["AI", "Web Dev"],
         "imageSrc": "aus-poster-pic.jpg",
         "link": "/cyberneticposter",
-        "description": ["A responsive poster that uses body tracking to morph and transform in response to the viewer."]
+        "description": ["A responsive poster that uses body tracking to morph and transform in response to the viewer."],
+        "alt": "A person standing in front of a pink interactive poster"
     },
     {
         "title": "Backwash Homepage",
         "tags": ["Web Dev", "Design"],
         "imageSrc": "backwash.png",
         "link": "/backwash",
-        "description": ["An animated homepage showcasing an Australian T-shirt company."]
+        "description": ["An animated homepage showcasing an Australian T-shirt company."],
+        "alt": "An old computer monitor with eyes."
     },
     {
         "title": "Ping 3D Web Game",
         "tags": ["Design", "Web Dev"],
         "imageSrc": "ping.png",
         "link": "/ping",
-        "description": ["A 3D web game reimagining classic Pong, built with Three.js."]
+        "description": ["A 3D web game reimagining classic Pong, built with Three.js."],
+        "alt": "A purple view of a ball and virtual paddle."
     },
     {
         "title": "Ukulele Hero Controller",
         "tags": ["Hardware", "Making"],
         "imageSrc": "ukulele.jpg",
         "link": "/ukulele",
-        "description": ["A 3D printed bluetooth controller for playing Guitar Hero."]
+        "description": ["A 3D printed bluetooth controller for playing Guitar Hero."],
+        "alt": "A 3D printed ukulele."
     },
     {
         "title": "Cybernetic Star Coasters",
         "tags": ["Making", "Design"],
         "imageSrc": "star.jpg",
         "link": "/coasters",
-        "description": ["Laser cut coasters with spinning interiors, designed to spark conversation about systems thinking in executive workshops."]
+        "description": ["Laser cut coasters with spinning interiors, designed to spark conversation about systems thinking in executive workshops."],
+        "alt": "A rendering of a wooden coaster with a star engraved."
     },
     {
         "title": "Arduino Doodle Jump",
         "tags": ["Hardware"],
         "imageSrc": "doodle.jpeg",
         "link": "/doodlejump",
-        "description": ["A doodle jump game displayed on a grid of LEDs."]
+        "description": ["A doodle jump game displayed on a grid of LEDs."],
+        "alt": "A 8x8 array of LEDs showing a game."
     },
     {
         "title": "Futures Spinner",
         "tags": ["Design", "Making"],
         "imageSrc": "futures.jpg",
         "link": "/futures",
-        "description": ["Spinning chamber used in responsible technology futures workshops with Meta."]
+        "description": ["Spinning chamber used in responsible technology futures workshops with Meta."],
+        "alt": "A render of a plastic box containing ping pong balls."
     },
     {
         "title": "ARtWalk",
         "tags": ["XR", "Design"],
         "imageSrc": "artwalk.jpg",
         "link": "/artwalk",
-        "description": ["A mixed reality concept for reimagining the way we experience public art."]
+        "description": ["A mixed reality concept for reimagining the way we experience public art."],
+        "alt": "A mixed reality view displaying the information for a public sculpture of a dinosaur."
     },
     {
         "title": "Woroni Magazine Designs",
         "tags": ["Design"],
         "imageSrc": "woroni.jpg",
         "link": "/woroni",
-        "description": ["Illustrations and designs for the Australian National University magazine."]
+        "description": ["Illustrations and designs for the Australian National University magazine."],
+        "alt": "A rendering of a magazine showing a man placing a rocket into a hurricane."
     }
 ]

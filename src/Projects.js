@@ -13,6 +13,7 @@ const Projects = forwardRef((props, ref) => (
         description={project.description} 
         tags={project.tags} 
         link={project.link} 
+        alt={project.alt}
       />
     ))}        
   </div>
