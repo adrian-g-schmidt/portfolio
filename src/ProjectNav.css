@@ -1,0 +1,49 @@
+.projectNav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+}
+
+.projectNavLink{
+    all: unset;
+    display: flex;
+    height: auto;
+    padding: 0px 30px;
+    border-radius: 50px;
+    transition: background-color 300ms ease-in-out;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+}
+  
+.projectNavLink:hover, .projectNavLink:focus{
+    background-color: var(--hover);
+}
+
+.projectNavLink h1{
+    font-family: Seasons;
+    font-size: 210%;
+    margin: 0px;
+}
+
+.projectNavLink img{
+    height: 20px;
+    margin-top: 5px;
+}
+
+
+
+@media (max-width: 730px) {
+    .projectNav{
+        margin: 0px 25px;
+    }
+
+    .projectNav h1{
+        font-size: 150%;
+    }
+
+    .projectNavLink img{
+        height: 15px;
+        margin-top: 3px;
+    }
+}

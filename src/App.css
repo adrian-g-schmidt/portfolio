@@ -1,38 +1,206 @@
+/* Universal Rules */
+
+:root {
+  --light: #dfdfdf;
+  --dark: #202020;
+  --mid: #2E2E2E;
+  --hover: #BEBEBE;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--mid);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Neue";
+  transition: dark 0.3s linear;
+}
+
+body, #root, .App, html, .content-parent {
+  height: 100%;
+  overflow-y: hidden; 
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  text-align: center;
   flex-direction: column;
+  transition: dark 0.3s linear;
+}
+
+#navigation {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  gap: 20px;
+}
+
+#navigation li {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  background-color: var(--dark);
+  color: var(--dark);
+  position: sticky;
+  top: 0px;
+  z-index: 999;
 }
 
-@keyframes App-logo-spin {
+#home{
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+#name {
+  font-family: "Seasons";
+  font-size: 130%;
+  font-weight: bold;
+  text-align: left;
+  color: var(--light);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+
+
+.button {
+  text-decoration: none;
+  text-align: right;
+  font-weight: 200;
+  cursor: pointer;
+  color: var(--light);
+  width: 100px;
+  pointer-events: auto;
+}
+
+.button:hover, li.highlighted .button {
+  font-weight: 400;
+  transform: translateX(1px);
+}
+
+.hamburger{
+  color: var(--dark);
+  display:none;
+  background-color: var(--light);
+  font-weight: 200;
+  border: 1px solid var(--light);
+  border-radius: 20px;
+  cursor: pointer;
+  width: 50px;
+  font-size: 140%;
+}
+
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+}
+
+.fadeOut {
+  animation: 0.5s fadeOut forwards;
+}
+
+
+.bigName{
+  font-size: 350% !important;
+  margin-top: 60px;
+}
+
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(-20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+}
+
+
+@media (max-width: 730px) {
+  
+  .hamburger{
+    display:block;
+    cursor: pointer;
+  }
+
+  #name {
+    font-size: 150%;
+  }
+
+  header{
+    padding: 0px 25px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center; 
+    justify-content: right;
+    position: relative;
+  }
+
+  #navigation {
+      flex-direction: column;
+      position: absolute;
+      top: 39px;
+      padding: 10px;
+      display: none;
+      gap: 20px;
+      z-index: 999;
+      pointer-events: none;
+      background-color: var(--dark);
+      justify-content: space-around;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+  }
+
+  .button{
+    text-align: left;
+  }
+
+  #navigation.showNav{
+    display: flex;
+  }
+
+  .button:hover, li.highlighted .button {
+    font-weight: 400;
+    transform: translateX(0px);
+  }
+  
+  .bigName{
+    font-size: 250% !important;
+    margin-top: 10px;
   }
 }

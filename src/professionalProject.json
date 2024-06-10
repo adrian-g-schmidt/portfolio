@@ -1,0 +1,100 @@
+[
+    {
+        "title": "Sonic Mutations",
+        "tags": ["AI", "Full Stack"],
+        "imageSrc": "sonic.png",
+        "link": "/sonic",
+        "description": ["Developing software for musicians to use generative AI in live performances at the Sydney Opera House."]
+    },
+    {
+        "title": "PANIC",
+        "tags": ["AI", "Design", "Making"],
+        "imageSrc": "panic-cover.jpg",
+        "link": "/panic",
+        "description": ["An art installation where audiences and generative AI systems shape each other, creating feedback loops between different models."]
+    },
+    {
+        "title": "Mixed Reality Navigation",
+        "tags": ["Unity", "XR", "Web Dev"],
+        "imageSrc": "mr-main.jpg",
+        "link": "/mrnavigation",
+        "description": ["Prototypes exploring audio and mixed reality technologies for the future of navigation."]
+    },
+    {
+        "title": "Habit Helper",
+        "tags": ["AI", "Full Stack"],
+        "imageSrc": "habit.png",
+        "link": "/habithelper",
+        "description": ["A prototype web app exploring how language models can assist in building positive habits."]
+    },
+    {
+        "title": "System of a Sound",
+        "tags": ["Design", "Web Dev"],
+        "imageSrc": "soas.jpg",
+        "link": "/system",
+        "description": ["An exhibition giving voice to the hidden data of buildings."]
+    },
+    {
+        "title": "Australian Cybernetic Interactive Poster",
+        "tags": ["AI", "Web Dev"],
+        "imageSrc": "aus-poster-pic.jpg",
+        "link": "/cyberneticposter",
+        "description": ["A responsive poster that uses body tracking to morph and transform in response to the viewer."]
+    },
+    {
+        "title": "Backwash Homepage",
+        "tags": ["Web Dev", "Design"],
+        "imageSrc": "backwash.png",
+        "link": "/backwash",
+        "description": ["An animated homepage showcasing an Australian T-shirt company."]
+    },
+    {
+        "title": "Ping 3D Web Game",
+        "tags": ["Design", "Web Dev"],
+        "imageSrc": "ping.png",
+        "link": "/ping",
+        "description": ["A 3D web game reimagining classic Pong, built with Three.js."]
+    },
+    {
+        "title": "Ukulele Hero Controller",
+        "tags": ["Hardware", "Making"],
+        "imageSrc": "ukulele.jpg",
+        "link": "/ukulele",
+        "description": ["A 3D printed bluetooth controller for playing Guitar Hero."]
+    },
+    {
+        "title": "Cybernetic Star Coasters",
+        "tags": ["Making", "Design"],
+        "imageSrc": "star.jpg",
+        "link": "/coasters",
+        "description": ["Laser cut coasters with spinning interiors, designed to spark conversation about systems thinking in executive workshops."]
+    },
+    {
+        "title": "Arduino Doodle Jump",
+        "tags": ["Hardware"],
+        "imageSrc": "doodle.jpeg",
+        "link": "/doodlejump",
+        "description": ["A doodle jump game displayed on a grid of LEDs."]
+    },
+    {
+        "title": "Futures Spinner",
+        "tags": ["Design", "Making"],
+        "imageSrc": "futures.jpg",
+        "link": "/futures",
+        "description": ["Spinning chamber used in responsible technology futures workshops with Meta."]
+    },
+    {
+        "title": "ARtWalk",
+        "tags": ["XR", "Design"],
+        "imageSrc": "artwalk.jpg",
+        "link": "/artwalk",
+        "description": ["A mixed reality concept for reimagining the way we experience public art."]
+    },
+    {
+        "title": "Woroni Magazine Designs",
+        "tags": ["Design"],
+        "imageSrc": "woroni.jpg",
+        "link": "/woroni",
+        "description": ["Illustrations and designs for the Australian National University magazine."]
+    }
+]

@@ -1,0 +1,95 @@
+.projectDisplay{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px;
+}
+
+.homePage, .project{
+  height: 100%;
+  overflow-y: auto; 
+}
+
+
+.projectCard{
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: auto;
+  padding: 30px;
+  border-radius: 50px;
+  transition: background-color 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.projectCard:hover, .projectCard:focus{
+  background-color: var(--hover);
+}
+
+.projectCard h1{
+  font-family: Seasons;
+  font-size: 210%;
+  margin: 10px 0px 0px 0px;
+}
+
+.projectCard img{
+  width: 100%;
+  border-radius: 20px;
+  height: 240px;
+  object-fit: cover;
+  background-color: var(--mid);
+}
+
+
+
+.projectCard p{
+  font-weight: 300;
+  margin: 10px 0px 0px 0px;
+}
+
+.projectCard .tagParent{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 10px 0px 0px 0px;
+}
+
+.projectCard .tag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+  color: var(--mid);
+  border-radius: 20px;
+  font-size: 70%;
+  padding: 0px 10px;
+  border: 1px solid var(--mid);
+  height: 20px;
+  text-transform: uppercase; 
+}
+
+
+@media (max-width: 1020px) {
+  .projectDisplay{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 1020px) {
+  .projectDisplay{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .projectDisplay{
+    grid-template-columns: repeat(1, 1fr);
+    padding: 25px;
+  }
+  
+}
+
+
+

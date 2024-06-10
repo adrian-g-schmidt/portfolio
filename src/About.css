@@ -1,0 +1,83 @@
+#about{
+    position: relative;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.projectButton{
+    all: unset;
+    display: flex;
+    height: auto;
+    padding: 0px 30px;
+    border-radius: 50px;
+    transition: background-color 300ms ease-in-out;
+    cursor: pointer;
+    align-items: center;
+    font-size: 400%;
+    font-weight: 400;
+    margin: 0px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    pointer-events: auto;
+    background-color: var(--light);
+}
+
+  
+.projectButton:hover, .projectButton:focus{
+    background-color: var(--hover);
+}
+
+
+.top{
+    background-color: var(--dark);
+    height: 50%;
+    font-weight: 400;
+    font-size: 700%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--light);
+}
+
+.bottom{
+    background-color: var(--light);
+    height: 50%;
+    font-size: 800%;
+    font-family: 'Seasons';
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--dark);
+}
+
+#testParent{
+    width: 100%;
+    position: absolute;
+}
+
+.aboutFull{
+    height: calc(100vh - 50px);
+}
+
+@media (max-width: 730px) {
+    .top{
+        font-size: 400%;
+        height: 30%;
+    }
+
+    .bottom{
+        font-size: 500%;
+        height: 70%;
+    }
+
+    .projectButton{
+        margin-bottom: 100px;
+    }
+
+    canvas{
+        pointer-events: none;
+    }
+
+}
