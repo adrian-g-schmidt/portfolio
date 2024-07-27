@@ -23,7 +23,6 @@ export default function Habit() {
                     <div className='cta-col'>
                         <a href="https://pax-habit-helper.fly.dev">
                             TRY IT HERE
-                            <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                         </a>
                     </div>
                 </div>

@@ -24,7 +24,6 @@ export default function Woroni() {
                     <div className='cta-col'>
                         <a href="https://issuu.com/woroni/docs/edition_2_013b5540c06d9e/30">
                             READ AN ISSUE HERE
-                            <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                         </a>
                     </div>
                 </div>

@@ -25,15 +25,12 @@ export default function System() {
                         <span>READ THE PAPERS</span>
                         <a href="https://dl.acm.org/doi/10.1007/978-3-031-29956-8_14" className='left-marg'>
                             Using GPT-3 to Achieve Semantically Relevant Data Sonificiation for an Art Installation
-                            <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                         </a>
                         <a href="https://dl.acm.org/doi/10.1145/3581754.3584119" className='left-marg'>
                             The Human-Built Environment-Natural Environment Relation
-                            <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                         </a>
                         <a href="https://arxiv.org/abs/2405.11772" className='left-marg'>
                             On the Design and Study of an Installation for Office Workers to Amplify Temporal Diversity and Connection to Nature
-                            <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                         </a>
                     </div>
                 </div>

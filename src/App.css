@@ -28,6 +28,19 @@ body, #root, .App, html, .content-parent {
   background-color: var(--light);
 }
 
+.projectDisplay{
+  max-width: 2500px;
+}
+
+#about {
+  width: 100%;
+}
+
+.homePage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .App {
   display: flex;
@@ -76,6 +89,7 @@ header{
   text-align: left;
   color: var(--light);
   transition: all 0.3s ease;
+  text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;

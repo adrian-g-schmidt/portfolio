@@ -23,7 +23,6 @@ export default function Panic() {
                     </div>
                     <a href="https://cybernetics.anu.edu.au/news/2022/11/22/panic-a-serendipity-engine/">
                         READ MORE ABOUT PANIC!
-                        <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                     </a>
                 </div>
 

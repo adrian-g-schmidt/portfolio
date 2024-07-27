@@ -22,7 +22,6 @@ export default function Backwash() {
                     <div className='cta-col'>
                         <a href="https://backwash.online/">
                             VISIT THE SITE HERE
-                            <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                         </a>
                     </div>
                 </div>

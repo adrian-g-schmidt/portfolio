@@ -24,7 +24,6 @@ export default function Sonic() {
                     </div>
                     <a href="https://stream.sydneyoperahouse.com/outlines/videos/sonic-mutations-a-generative-music-exploration-outlines-2023">
                         VIEW LIVESTREAM RECORDING
-                        <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                     </a>
                 </div>
 
@@ -70,7 +69,7 @@ export default function Sonic() {
                 </div>                               
                 <div>
                     <h2>Crafting personalized models</h2>
-                    <p>Collaborating closely with the artists, we focused on transforming it into a personalized creative tool. We experimented with training the model on a diverse range of sounds, from their previous music and singing to recordings of Australian wildlife and rocks. This iterative and exploratory process resulted in bespoke models for each artist, allowing them to express their unique musical vision through a truly customized instrument.</p>
+                    <p>Collaborating closely with the artists, we focused on transforming it into a personalized creative tool by finetuning the model using LoRA. We experimented with training the model on a diverse range of sounds, from their previous music and singing to recordings of Australian wildlife and rocks. This iterative and exploratory process resulted in bespoke models for each artist, allowing them to express their unique musical vision through a truly customized instrument.</p>
                 </div>
                 <div className='figure content-video'>
                     <video width="100%" controls>

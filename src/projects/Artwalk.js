@@ -24,7 +24,6 @@ export default function Artwalk() {
                     <div className='cta-col'>
                         <a href="https://drive.google.com/file/d/15Tevr67OhOhqWv67L1nhvP3Bh_Vzwv3C/view?usp=sharing">
                             WATCH THE FULL VIDEO HERE
-                            <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                         </a>
                     </div>
                 </div>

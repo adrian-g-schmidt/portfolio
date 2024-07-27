@@ -3,7 +3,7 @@ import Matter, { Events } from 'matter-js';
 import { useLocation } from 'react-router-dom';
 
 
-export default function Test(){
+export default function HomeCanvas(){
   const engineRef = useRef();
   const renderRef = useRef();
   const runnerRef = useRef();
@@ -53,20 +53,21 @@ export default function Test(){
     updateCanvasSize(); // Initial update
     window.addEventListener('resize', updateCanvasSize);  // Update on resize
 
-    canvas.addEventListener('wheel', handleWheelStart);
-    canvas.addEventListener('wheel', handleWheelStop, { passive: true });
+    canvas.addEventListener('wheel', handleWheelStart, { passive: false });
+    canvas.addEventListener('wheel', handleWheelStop);
     canvas.addEventListener('touchstart', handleWheelStart);
-    canvas.addEventListener('touchend', handleWheelStop, { passive: true });
+    canvas.addEventListener('touchend', handleWheelStop);
 
 
     return () => {
-      canvas.removeEventListener('wheel', handleWheelStart);
-      canvas.removeEventListener('wheel', handleWheelStop, { passive: true });
+      canvas.removeEventListener('wheel', handleWheelStart, { passive: false });
+      canvas.removeEventListener('wheel', handleWheelStop);
+      canvas.removeEventListener('touchstart', handleWheelStart);
+      canvas.removeEventListener('touchend', handleWheelStop);
       window.removeEventListener('resize', updateCanvasSize);
     };
 
     }, [isCanvasReady]);
-
 
   useEffect(() => {
     if (!isCanvasReady) return; // Don't initialize Matter.js if canvas isn't ready
@@ -100,13 +101,13 @@ export default function Test(){
     const circleData = [];
   
     for (let i = 0; i < numCircles; i++) {
-      const radius = Math.random() * 80 + 10;
+      const radius = Math.random() * parseInt(canvasSize.height/10) + 10;
       const angle = Math.random() * 2 * Math.PI; // Random angle in radians
       const speed = Math.random() * 10 + 1;     // Random speed
   
       circleData.push({
-        x: Math.random() * canvasSize.width,
-        y: Math.random() * canvasSize.height/2,
+        x: Math.random() * canvasSize.width/2+canvasSize.width/4,
+        y: Math.random() * canvasSize.height/2+canvasSize.height/4,
         radius,
         velocity: {
           x: Math.cos(angle) * speed,
@@ -165,7 +166,21 @@ export default function Test(){
     });
 
     engineRef.current.world.gravity.y = 0; 
-    // const gravityThreshold = canvasSize.height/2; // The y-value where gravity changes
+    const gravityThreshold = canvasSize.height/2; // The y-value where gravity changes
+    const gravityThresholdX = canvasSize.width/2; // The x-value where gravity changes
+
+
+    const limitMaxSpeed = (event) => {
+      event.source.world.bodies.forEach((body) => {
+        let maxSpeed = 10
+        Matter.Body.setVelocity(body, {
+          x: Math.min(maxSpeed, Math.max(-maxSpeed, body.velocity.x)),
+          y: Math.min(maxSpeed, Math.max(-maxSpeed, body.velocity.y)),
+        })
+      })
+    }
+  
+    Matter.Events.on(engineRef.current, 'beforeUpdate', limitMaxSpeed)
 
     Events.on(engineRef.current, 'beforeUpdate', () => { 
       const bodies = Composite.allBodies(engineRef.current.world);
@@ -174,11 +189,16 @@ export default function Test(){
   
       circles.forEach(body => {
         body.force.y = 0.0005; 
-        // if (body.position.y < gravityThreshold - 5) {
-        //   body.force.y = 0.0001; 
-        // } else if (body.position.y > gravityThreshold + 5) {
-        //   body.force.y = -0.0001; 
-        // }
+        if (body.position.y < gravityThreshold - 5) {
+          body.force.y = -0.0001; 
+        } else if (body.position.y > gravityThreshold + 5) {
+          body.force.y = 0.0001; 
+        }
+        if (body.position.x < gravityThresholdX - 5) {
+          body.force.x = -0.0001; 
+        } else if (body.position.x > gravityThresholdX + 5) {
+          body.force.x = 0.0001; 
+        }
       });
     });
 
@@ -186,9 +206,10 @@ export default function Test(){
     Events.on(mouseConstraintRef.current, 'mousemove', (event) => {
       const mousePosition = event.mouse.position;
       const bodies = Composite.allBodies(engineRef.current.world);
+      const circles = bodies.filter(body => body.label === 'Circle Body'); 
 
       let hovering = false;
-      for (let body of bodies) {
+      for (let body of circles) {
         if (Matter.Bounds.contains(body.bounds, mousePosition)) {
           if (Matter.Vertices.contains(body.vertices, mousePosition)) {
             hovering = true;
@@ -237,7 +258,7 @@ export default function Test(){
       id="test"
       width="100%"
       height="100%"
-      style={{ borderRadius: '20px', mixBlendMode: "difference"}}
+      style={{ mixBlendMode: "difference"}}
     />
   </div>
 

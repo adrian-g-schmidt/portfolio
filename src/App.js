@@ -11,15 +11,17 @@ import MixedReality from './projects/MR';
 import Panic from './projects/Panic';
 import System from './projects/System';
 import Backwash from './projects/Backwash';
-import Doodle from './projects/Doodle';
 import Habit from './projects/Habit';
 import Poster from './projects/Poster';
-import Ukulele from './projects/Ukulele';
-import Artwalk from './projects/Artwalk';
-import Futures from './projects/Futures';
-import Star from './projects/Star';
-import Woroni from './projects/Woroni';
 import Ping from './projects/Ping';
+
+
+// import Futures from './projects/Futures';
+// import Ukulele from './projects/Ukulele';
+// import Star from './projects/Star';
+// import Woroni from './projects/Woroni';
+// import Artwalk from './projects/Artwalk';
+// import Doodle from './projects/Doodle';
 
 
 
@@ -39,9 +41,8 @@ function App() {
   const projectRef = useRef(null);
   const navigate = useNavigate();
   const scrollRef = useRef(null);
-  const [scrollAtTop, setScrollAtTop] = useState(false);
 
-  // Google tracking for each apge
+  // Google tracking for each app page
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", page: location.pathname, title: location.pathname });
   }, [location]);
@@ -66,28 +67,6 @@ function App() {
     }
   }, [displayLocation]);
 
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (topRef.current && scrollRef.current) {
-        const rect = topRef.current.getBoundingClientRect();
-        setScrollAtTop(rect.top === 50);
-      }
-    };
-  
-    const scrollElement = scrollRef.current;
-  
-    if (scrollElement) {
-      // Trigger the scroll handler immediately on mount
-      handleScroll(); 
-  
-      scrollElement.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        scrollElement.removeEventListener('scroll', handleScroll);
-      };
-    }
-  }, [topRef, scrollRef]); // Include refs in the dependency array
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -120,7 +99,7 @@ function App() {
       {/* <Cursor></Cursor> */}
       <header>
             <div id='home'>
-              <div id='name' className={`${scrollAtTop ? 'bigName' : ''}`}>adrian schmidt</div>
+              {useLocation().pathname === '/projects' ?  <Link to="/projects" id='name' onClick={() => {if (topRef.current) topRef.current.scrollIntoView({ behavior: 'smooth' })}}>adrian schmidt</Link> : <Link to="/" id='name'>adrian schmidt</Link>}
             </div>
             <nav>
             <div className="hamburger" onClick={() => setMenuShowing(!menuShowing)}>
@@ -129,9 +108,6 @@ function App() {
             <ul id="navigation" className={menuShowing ? 'showNav' : ''}>
               <li className={useLocation().pathname === '/projects' ? 'highlighted': ''}>
                 {useLocation().pathname === '/' ?  <Link to="/" className='button' onClick={() => {if (projectRef.current) projectRef.current.scrollIntoView({ behavior: 'smooth' })}}>PROJECTS</Link> : <Link to="/projects" className='button'>PROJECTS</Link>}
-              </li>
-              <li className={useLocation().pathname==='/' ? 'highlighted': ''}>
-                {useLocation().pathname === '/projects' ?  <Link to="/projects" className='button' onClick={() => {if (topRef.current) topRef.current.scrollIntoView({ behavior: 'smooth' })}}>HOME</Link> : <Link to="/" className='button'>HOME</Link>}
               </li>
             </ul>
             </nav>
@@ -146,7 +122,6 @@ function App() {
               animatedDivRef.current.className = "content-parent fadeIn";
           }}
         >
-
         <Routes location={displayLocation}>
           <Route path="/" element={<div className='homePage' ref={scrollRef}><About ref={topRef} projectRef={projectRef}></About><Projects ref={projectRef}></Projects></div>} />
           <Route path="/projects" element={<div className='homePage' ref={scrollRef}><About ref={topRef} projectRef={projectRef}></About><Projects ref={projectRef}></Projects></div>} />
@@ -154,16 +129,17 @@ function App() {
           <Route path="/projects/mrnavigation" element={<><MixedReality></MixedReality></>} />
           <Route path="/projects/panic" element={<><Panic></Panic></>} />
           <Route path="/projects/system" element={<><System></System></>} />
-          <Route path="/projects/artwalk" element={<><Artwalk></Artwalk></>} />
           <Route path="/projects/backwash" element={<><Backwash></Backwash></>} />
-          <Route path="/projects/doodlejump" element={<><Doodle></Doodle></>} />
-          <Route path="/projects/futures" element={<><Futures></Futures></>} />
           <Route path="/projects/habithelper" element={<><Habit></Habit></>} />
           <Route path="/projects/cyberneticposter" element={<><Poster></Poster></>} />
-          <Route path="/projects/coasters" element={<><Star></Star></>} />
-          <Route path="/projects/ukulele" element={<><Ukulele></Ukulele></>} />
           <Route path="/projects/ping" element={<><Ping></Ping></>} />
-          <Route path="/projects/woroni" element={<><Woroni></Woroni></>} />
+
+          {/* <Route path="/projects/artwalk" element={<><Artwalk></Artwalk></>} />
+          <Route path="/projects/coasters" element={<><Star></Star></>} />
+          <Route path="/projects/futures" element={<><Futures></Futures></>} />
+          <Route path="/projects/ukulele" element={<><Ukulele></Ukulele></>} />
+          <Route path="/projects/woroni" element={<><Woroni></Woroni></>} /> 
+          <Route path="/projects/doodlejump" element={<><Doodle></Doodle></>} /> */}
         </Routes> 
       </div>
     </div>

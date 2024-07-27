@@ -22,9 +22,8 @@ export default function Ping() {
                         </div>
                     </div>
                     <div className='cta-col'>
-                        <a href="https://agschmid.github.io/final-project/ping/">
+                        <a href="https://adrian-g-schmidt.github.io/final-project/ping/">
                             PLAY IT HERE
-                            <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
                         </a>
                     </div>
                 </div>

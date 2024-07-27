@@ -6,11 +6,44 @@
     user-select: none;
 }
 
+@keyframes slideUpDown {
+    0%, 80% { /* Stay at initial position for most of the cycle */
+      margin-top: 0;
+      margin-bottom: 14px;
+      animation-timing-function: ease-in-out;
+    }
+    85% { /* First move down */
+      margin-top: 14px;
+      margin-bottom: 0;
+      animation-timing-function: ease-in-out;
+    }
+    90% { /* Move back up */
+      margin-top: 0;
+      margin-bottom: 14px;
+      animation-timing-function: ease-in-out;
+    }
+    95% { /* Second move down */
+      margin-top: 14px;
+      margin-bottom: 0;
+      animation-timing-function: ease-in-out;
+    }
+    100% { /* Return to initial position */
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+  }
+  
+  .projectButton img {
+    animation: slideUpDown 10s infinite;
+  }
+
+
+
 .projectButton{
     all: unset;
     display: flex;
     height: auto;
-    padding: 0px 30px;
+    padding: 30px 30px;
     border-radius: 50px;
     transition: background-color 300ms ease-in-out;
     cursor: pointer;
@@ -21,12 +54,18 @@
     margin-bottom: 40px;
     cursor: pointer;
     pointer-events: auto;
-    background-color: var(--light);
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--dark);
+    transition: margin 0.3s ease-in-out;
 }
 
-  
-.projectButton:hover, .projectButton:focus{
-    background-color: var(--hover);
+.projectButton img{
+    transform: rotate(90deg) scale(2);
+}
+
+.projectButton:hover{
+    margin-top: 14px;
+    margin-bottom: 26px;
 }
 
 
@@ -58,23 +97,18 @@
 }
 
 .aboutFull{
-    height: calc(100vh - 50px);
+    height: calc(100vh - 200px);
 }
 
 @media (max-width: 730px) {
     .top{
         font-size: 400%;
-        height: 30%;
     }
 
     .bottom{
         font-size: 500%;
-        height: 70%;
     }
 
-    .projectButton{
-        margin-bottom: 100px;
-    }
 
     canvas{
         pointer-events: none;
