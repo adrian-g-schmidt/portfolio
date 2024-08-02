@@ -9,14 +9,12 @@ export default function ProjectNav(props) {
 
   return (
     <div className="projectNav">
-      <Link className='projectNavLink' to={"/projects" + projectData[prevIndex].link}>
-        <img src={`${process.env.PUBLIC_URL}/assets/chevron-left.svg`} alt="left arrow" />
-        <h1>{projectData[prevIndex].title}</h1>
+      <Link className='projectNavLinkLeft' to={"/projects" + projectData[prevIndex].link}>
+        <div>{projectData[prevIndex].title}</div>
       </Link>
       
-      <Link className='projectNavLink' to={"/projects" + projectData[nextIndex].link}>
-        <h1>{projectData[nextIndex].title}</h1>
-        <img src={`${process.env.PUBLIC_URL}/assets/chevron-right.svg`} alt="right arrow" />
+      <Link className='projectNavLinkRight' to={"/projects" + projectData[nextIndex].link}>
+        <div>{projectData[nextIndex].title}</div>
       </Link>
     </div>
   );

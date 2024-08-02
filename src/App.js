@@ -102,9 +102,9 @@ function App() {
               {useLocation().pathname === '/projects' ?  <Link to="/projects" id='name' onClick={() => {if (topRef.current) topRef.current.scrollIntoView({ behavior: 'smooth' })}}>adrian schmidt</Link> : <Link to="/" id='name'>adrian schmidt</Link>}
             </div>
             <nav>
-            <div className="hamburger" onClick={() => setMenuShowing(!menuShowing)}>
+            {/* <div className="hamburger" onClick={() => setMenuShowing(!menuShowing)}>
               ☰
-            </div>
+            </div> */}
             <ul id="navigation" className={menuShowing ? 'showNav' : ''}>
               <li className={useLocation().pathname === '/projects' ? 'highlighted': ''}>
                 {useLocation().pathname === '/' ?  <Link to="/" className='button' onClick={() => {if (projectRef.current) projectRef.current.scrollIntoView({ behavior: 'smooth' })}}>PROJECTS</Link> : <Link to="/projects" className='button'>PROJECTS</Link>}

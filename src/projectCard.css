@@ -21,11 +21,20 @@
   border-radius: 50px;
   transition: background-color 300ms ease-in-out;
   cursor: pointer;
+  justify-content: space-between;
+}
+
+.projectCardMain{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .projectCard:hover, .projectCard:focus{
   background-color: var(--hover);
 }
+
+
 
 .projectCard h1{
   font-family: Seasons;
@@ -39,6 +48,7 @@
   height: 240px;
   object-fit: cover;
   background-color: var(--mid);
+  transition: height 0.3s ease-in-out;
 }
 
 
@@ -67,6 +77,49 @@
   border: 1px solid var(--mid);
   height: 20px;
   text-transform: uppercase; 
+}
+
+.projectCardExtra{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+  width: fit-content;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+  transform: translateY(20px);
+  margin-top: 0px;
+}
+
+.projectCardExtra::after{
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-image: url('chevron-right.svg'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  margin-right: 8px;
+  margin-top: 1px;
+}
+
+.projectCardExtra:hover:after{
+  margin-left: 8px;
+  margin-right: 0px;
+}
+
+.projectCard:hover .projectCardExtra, .projectCard:focus .projectCardExtra{
+  opacity: 1;
+  transform: translateY(0px);
+  margin-top: 40px;
+}
+
+.projectCard:hover img{
+  height: 200px;
 }
 
 
