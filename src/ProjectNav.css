@@ -25,6 +25,7 @@
 
 .projectNavLinkLeft{
     transform: translateX(-20px);
+    text-align: left;
 }
 
 .projectNavLinkRight::after{
