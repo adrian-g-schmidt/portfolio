@@ -2,10 +2,10 @@
     {
         "title": "Sonic Mutations",
         "tags": ["AI Training", "Python", "HTML/CSS/JS"],
-        "imageSrc": "sonic.png",
+        "imageSrc": "sonic-cover.jpeg",
         "link": "/sonic",
         "description": ["Developing software for musicians to use generative AI in live performances at the Sydney Opera House."],
-        "alt": "2 Musicians standing on a colorful stage"
+        "alt": "Alexis Weaver playing live music with music interface elements overlayed."
     },
     {
         "title": "PANIC",
