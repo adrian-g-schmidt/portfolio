@@ -1,6 +1,7 @@
 import '../Project.css';
 import ProjectNav from '../ProjectNav';
 import ReactPlayer from 'react-player';
+import CustomPlayer from '../CustomPlayer';
 
 export default function Sonic() {
 
@@ -72,10 +73,16 @@ export default function Sonic() {
                     <p>Collaborating closely with the artists, we focused on transforming it into a personalized creative tool by finetuning the model using LoRA. We experimented with training the model on a diverse range of sounds, from their previous music and singing to recordings of Australian wildlife and rocks. This iterative and exploratory process resulted in bespoke models for each artist, allowing them to express their unique musical vision through a truly customized instrument.</p>
                 </div>
                 <div className='figure content-video'>
-                    <video width="100%" controls>
-                            <source src={`${process.env.PUBLIC_URL}/assets/videos/voice-model.mp4#t=0.001`} type="video/mp4"/>
-                        Your browser does not support the video tag.
-                    </video>      
+                    <CustomPlayer
+                        url={`${process.env.PUBLIC_URL}/assets/videos/voice-model.mp4#t=0.001`}
+                        playsinline={false} // Change to true if you want inline playback
+                        playing={false}
+                        loop={false}
+                        muted={false}
+                        width="100%"
+                        height="auto"
+                        className={"content-video crop"}
+                    />
                     <div className='caption'>
                         The "Skype" sound effect before and after being run through a model trained on clips of Alexis Weaver's voice harmonies. 
                     </div>
@@ -86,10 +93,16 @@ export default function Sonic() {
                         The resulting tool was used in performances at the Sydney Opera House “Outlines Festival”, and SXSW Sydney, and is <a href='https://www.koupmusic.com/'>now being developed further.</a></p>
                 </div>
                 <div className='figure content-video'>
-                    <video width="100%" controls>
-                            <source src={`${process.env.PUBLIC_URL}/assets/videos/sonic-clip.mp4#t=0.001`} type="video/mp4"/>
-                        Your browser does not support the video tag.
-                    </video>      
+                    <CustomPlayer
+                        url={`${process.env.PUBLIC_URL}/assets/videos/sonic-clip.mp4#t=0.001`}
+                        playsinline={false} // Change to true if you want inline playback
+                        playing={false}
+                        loop={false}
+                        muted={false}
+                        width="100%"
+                        height="auto"
+                        className={"content-video crop"}
+                    />     
                     <div className='caption'>
                         Alexis Weaver using the tool trained on her voice in a performance at the Sydney Opera House.
                     </div>

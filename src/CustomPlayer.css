@@ -1,0 +1,29 @@
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.video-overlay svg {
+    width: 80px;
+    height: 80px;
+}
+
+.content-video.crop {
+    object-fit: cover;
+}
+  

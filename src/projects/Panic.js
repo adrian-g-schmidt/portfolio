@@ -2,6 +2,8 @@ import '../Project.css';
 import ProjectNav from '../ProjectNav';
 import ReactPlayer from 'react-player';
 
+import CustomPlayer from '../CustomPlayer';
+
 export default function Panic() {
     return (
         <div className='project'>
@@ -52,10 +54,16 @@ export default function Panic() {
                     <p>Collaborating with Dr. Ben Swift, we envisioned and developed PANIC! (Playground AI Network for Interactive Creativity), a system enabling users to rapidly experiment with multiple generative AI models in a chain-like fashion. After an initial showcase at the Creative AI Sydney Conference, we expanded PANIC! into an interactive public installation. I designed and built the physical installation, featuring split-flap Vestaboards, television screens, and a custom input terminal with a "panic button" to trigger the AI model cycle, primarily focusing on image generation and description models.</p>
                 </div>
                 <div className='figure content-video'>
-                    <video width="100%" controls>
-                            <source src={`${process.env.PUBLIC_URL}/assets/videos/panic-news.mp4#t=0.001`} type="video/mp4"/>
-                        Your browser does not support the video tag.
-                    </video>      
+                    <CustomPlayer
+                        url={`${process.env.PUBLIC_URL}/assets/videos/panic-news.mp4#t=0.001`}
+                        playsinline={false} // Change to true if you want inline playback
+                        playing={false}
+                        loop={false}
+                        muted={false}
+                        width="100%"
+                        height="auto"
+                        className={"content-video crop"}
+                    />
                     <div className='caption'>
                         News coverage of PANIC! at the exhibition.
                     </div>

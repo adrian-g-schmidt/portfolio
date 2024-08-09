@@ -1,5 +1,6 @@
 import '../Project.css';
 import ProjectNav from '../ProjectNav';
+import CustomPlayer from '../CustomPlayer';
 
 export default function System() {
     return (
@@ -36,10 +37,16 @@ export default function System() {
                 </div>
 
                 <div className="project-header-image">
-                    <video width="100%" controls className='header-main'>
-                        <source src={`${process.env.PUBLIC_URL}/assets/videos/soas-video.mp4#t=0.001`} type="video/mp4"/>
-                    Your browser does not support the video tag.
-                    </video>         
+                    <CustomPlayer
+                        url={`${process.env.PUBLIC_URL}/assets/videos/soas-video.mp4#t=0.001`}
+                        playsinline={false} // Change to true if you want inline playback
+                        playing={false}
+                        loop={false}
+                        muted={false}
+                        width="100%"
+                        height="auto"
+                        className={"content-video crop"}
+                    />    
                 </div>
             </div>
             <ProjectNav index={4}></ProjectNav>
