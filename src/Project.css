@@ -219,6 +219,7 @@
 .caption{
     font-size: 100%;
     font-weight: 200;
+    text-align: center;
 }
 
 @media (max-width: 1020px) {

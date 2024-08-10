@@ -14,7 +14,7 @@ import Backwash from './projects/Backwash';
 import Habit from './projects/Habit';
 import Poster from './projects/Poster';
 import Ping from './projects/Ping';
-
+import Fugu from './projects/Fugu';
 
 
 // import Futures from './projects/Futures';
@@ -134,6 +134,7 @@ function App() {
           <Route path="/projects/habithelper" element={<><Habit></Habit></>} />
           <Route path="/projects/cyberneticposter" element={<><Poster></Poster></>} />
           <Route path="/projects/ping" element={<><Ping></Ping></>} />
+          <Route path="/projects/fugu" element={<><Fugu></Fugu></>} />
 
           {/* <Route path="/projects/artwalk" element={<><Artwalk></Artwalk></>} />
           <Route path="/projects/coasters" element={<><Star></Star></>} />
