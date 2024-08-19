@@ -10,7 +10,8 @@ export default function Sonic() {
             <div className="project-header">
                 <div className="project-header-content">
                     <h1>Sonic Mutations</h1>
-                    <p className="header-description">I developed software for musicians to train generative AI models and seamlessly integrate them into live performances, showcased at the Sydney Opera House and SXSW.</p>
+                    <p className="header-description">Sonic Mutations is a personalized AI instrument showcased by musicians Alexis Weaver and Salllvage at the Sydney Opera House. 
+                    I researched and developed the AI models and built the UI to integrate this technology into live performances. </p>
                     <div className='header-col-parent'>
                         <div className="header-col">
                             <h2>Team</h2>
@@ -51,7 +52,8 @@ export default function Sonic() {
             <div className='project-content'>
                 <div>
                     <h2>Supporting creativity with generative AI</h2>
-                    <p>Exploring the landscape of AI-generated music, I sought models that would allow the musicians to explore. Riffusion, a diffusion-based image model that transforms spectrograms into audio, emerged as the optimal choice by testing multiple open-source options. By modifying the pipeline of Riffusion, we could, in real-time, combine input sounds, prompts, and degrees of transformation into new audio that the artists were excited to play with.</p>
+                    <p>Sonic Mutations was a project commissioned by the Sydney Opera House to explore how artists could use generative-AI in live performances. Researching the landscape of music generation, I sought models that would allow the musicians to explore. Riffusion, a diffusion-based image model that transforms spectrograms into audio, emerged as the optimal choice by testing multiple open-source options. By modifying the pipeline of Riffusion, we could, in real-time, combine input sounds, prompts, and degrees of transformation into new audio that the artists were excited to play with.
+                    </p>
                 </div>
                 <div className='figure'>
                         <ReactPlayer
@@ -70,7 +72,8 @@ export default function Sonic() {
                 </div>                               
                 <div>
                     <h2>Crafting personalized models</h2>
-                    <p>Collaborating closely with the artists, we focused on transforming it into a personalized creative tool by finetuning the model using LoRA. We experimented with training the model on a diverse range of sounds, from their previous music and singing to recordings of Australian wildlife and rocks. This iterative and exploratory process resulted in bespoke models for each artist, allowing them to express their unique musical vision through a truly customized instrument.</p>
+                    <p>To truly support artists in their music production, we understood the tool needed to generate audio that aligned with each artist's style. Collaborating closely with the artists, we focused on transforming it into a personalized creative tool by finetuning the model using LoRA. We experimented with training the model on a diverse range of sounds, from their previous music and singing to recordings of Australian wildlife and rocks. This iterative and exploratory process resulted in bespoke models for each artist, allowing them to express their unique musical vision through a truly customized instrument.
+                    </p>
                 </div>
                 <div className='figure content-video'>
                     <CustomPlayer
@@ -88,7 +91,7 @@ export default function Sonic() {
                     </div>
                 </div>                <div>
                     <h2>From experimentation to live performance</h2>
-                    <p>With many options for interaction, we explored ways the artists could incorporate generating music into live performances. The final interface enabled artists to upload or record audio, experiment with various prompts, save their preferred settings, generate multiple sounds in a row, and seamlessly integrate the generated audio into their performance software through batch downloading and live playback/looping features.
+                    <p>With many options for interaction, we explored ways the artists could incorporate generating music into live performances. After testing multiple iterations, the final interface enabled artists to upload or record audio, experiment with various prompts, save their preferred settings, generate multiple sounds in a row, and seamlessly integrate the generated audio into their performance software through batch downloading and live playback/looping features. We designed these approaches to make it as fast and intuitive as possible for the artists to incorporate the tool into their workflow.
                     <br></br> <br></br>
                         The resulting tool was used in performances at the Sydney Opera House “Outlines Festival”, and SXSW Sydney, and is <a href='https://www.koupmusic.com/'>now being developed further.</a></p>
                 </div>

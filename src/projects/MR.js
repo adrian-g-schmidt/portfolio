@@ -10,7 +10,7 @@ export default function MixedReality() {
             <div className="project-header">
                 <div className="project-header-content">
                     <h1>Mixed Reality Navigation</h1>
-                    <p className="header-description">I rapidly prototyped novel approaches to navigating indoor spaces using mixed reality technology.</p>
+                    <p className="header-description">Mixed Reality Navigation was a series of experiments exploring novel approaches to indoor wayfinding. I rapidly developed Unity prototypes and a directional audio app to test these concepts.</p>
                     <div className='header-col-parent'>
                         <div className="header-col">
                             <h2>Context</h2>

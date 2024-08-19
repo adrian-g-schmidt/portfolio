@@ -8,7 +8,7 @@ export default function Backwash() {
             <div className="project-header">
                 <div className="project-header-content">
                     <h1>Backwash Homepage</h1>
-                    <p className="header-description">I developed the homepage for an Australian T-shirt company, creating a site where multiple 2D layers create the illusion of 3D objects that follow the user's cursor. </p>
+                    <p className="header-description">The Backwash Homepage is an interactive landing page for an Australian T-Shirt company, designed with the aesthetics of a CRT monitor. I developed the site, using JS and CSS to create pixelated eyes that track the user's cursor.</p>
                     <div className='header-col-parent'>
                         <div className="header-col">
                             <h2>Team</h2>

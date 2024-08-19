@@ -8,7 +8,7 @@ export default function Poster() {
             <div className="project-header">
                 <div className="project-header-content">
                     <h1>Australian Cybernetic Interactive Poster</h1>
-                    <p className="header-description">I developed motion tracking into an interactive poster designed by Kopi Su for the "Australian Cybernetic" exhibition. The poster was displayed on a digital monitor and connected to a camera that detects the viewer's proximity using Computer Vision. The poster shifts in colour as the viewer moves, creating a playful dance that embodies the creative human-computer relationship. </p>
+                    <p className="header-description">For the "Australian Cybernetic" exhibition, Kopi Su designed an interactive poster to display at the entrance on a digital monitor. I developed motion tracking for this poster, integrating computer vision to detect the viewer's proximity, shifting colors as the viewer moves, and creating a playful dance that embodies the creative human-computer relationship.</p>
                     <div className='header-col-parent'>
                         <div className="header-col">
                             <h2>Team</h2>

@@ -8,7 +8,7 @@ export default function System() {
             <div className="project-header">
                 <div className="project-header-content">
                     <h1>System of a Sound</h1>
-                    <p className="header-description">I designed and developed the interface and animations for an exhibition giving voice to the hidden data of buildings through music, co-authoring three academic papers on the exhibition. </p>
+                    <p className="header-description">System of a Sound is a research installation that gives voice to the hidden data of buildings through music. I designed and developed the interface and animations for the exhibition, co-authoring three academic papers on the work.</p>
                     <div className='header-col-parent'>
                         <div className="header-col">
                             <h2>Team</h2>

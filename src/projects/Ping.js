@@ -8,7 +8,7 @@ export default function Ping() {
             <div className="project-header">
                 <div className="project-header-content">
                     <h1>Ping 3D Web Game</h1>
-                    <p className="header-description">I developed a 3D Pong game using the Three.js library and React, compatible with both desktop and mobile devices. </p>
+                    <p className="header-description">Ping is a 3D version of Pong with synth-wave aesthetics. I designed and developed the game using Three.js and React, making it compatible with desktop and mobile devices.</p>
                     <div className='header-col-parent'>
                         <div className="header-col">
                             <h2>Context</h2>

@@ -10,7 +10,7 @@ export default function Panic() {
             <div className="project-header">
                 <div className="project-header-content">
                     <h1>PANIC</h1>
-                    <p className="header-description">I created an interactive generative AI artwork, engaging thousands of visitors and serving as a key educational tool in executive workshops.</p>
+                    <p className="header-description">PANIC! is an interactive installation that lets people rapidly experiment with multiple generative AI models in a chain-like fashion. I worked with Dr. Ben Swift to develop the hardware and software used in the exhibition.</p>
                     <div className='header-col-parent'>
                         <div className="header-col">
                             <h2>Collaborators</h2>
